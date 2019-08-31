@@ -29,6 +29,43 @@ integrate screenshots, install `Tesseract
 <https://www.imagemagick.org/>`_, `FFmpeg <http://ffmpeg.org/>`_ and
 `PhantomJS <http://phantomjs.org/>`_.
 
+External program's installation commands:
+
+-Masscan:
+<code>sudo apt-get install masscan</code>
+
+-Tesseract:
+<code>sudo snap install --channel=edge tesseract</code>
+
+-ImageMagick:
+<code>git clone https://github.com/ImageMagick.git</code>
+<code>cd ImageMagick</code>
+<code>./configure</code>
+<code>make</code>
+<code>sudo make install</code>
+<code>sudo ldconfig /usr/local/lib</code>
+
+-FFmpeg:
+<code>git clone https://git.ffmpeg.org/ffmpeg.git ffmpeg</code>
+<code>cd ffmpeg</code>
+<code>./configure</code>
+<code>make</code>
+<code>make install</code>
+
+-PhantomJS:
+You choose what PhantomJS version you need from here : https://phantomjs.org/download.html
+After you extract it, rename the extracted folder with the name: <code>phantomjs</code>.
+Then open terminal and go to the place you extracted phantomjs and execute these commands:
+<code>sudo mv phantomjs/ /usr/local/share</code>
+<code>cd ~</code>
+<code>cd ..</code>
+<code>cd ..</code>
+<code>cd usr/local/share/</code>
+<code>sudo ln -s /usr/local/share/phantomjs/bin/phantomjs /usr/local/bin/phantomjs</code>
+<code>sudo ln -s /usr/local/share/phantomjs/bin/phantomjs /usr/bin/phantomjs</code>
+
+
+
 If you plan to analyze PCAP file on a machine, install, depending on
 your needs:
 
